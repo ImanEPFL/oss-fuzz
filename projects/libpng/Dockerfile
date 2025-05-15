@@ -15,8 +15,8 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder
-# RUN apt-get update && \
-#     apt-get install -y make autoconf automake libtool zlib1g-dev
+RUN apt-get update && \
+    apt-get install -y make autoconf automake libtool zlib1g-dev
 
 RUN git clone --depth 1 https://github.com/madler/zlib.git
 RUN git clone --branch crash_write --single-branch --depth 1 https://github.com/ahzero7d1/libpng.git
